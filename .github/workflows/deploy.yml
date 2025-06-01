@@ -16,7 +16,7 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > private_key.pem
           chmod 600 private_key.pem
           ssh -i private_key.pem -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST 
-          'cd /home/ubuntu/app &&
-          git pull orign main && 
-          docker-compose down &&
+          'cd /home/ubuntu/app
+          git pull origin main 
+          docker-compose down
           docker-compose up -d --build'
